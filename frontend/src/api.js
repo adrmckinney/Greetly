@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { Fragment, useEffect, useState } from 'react'
+import { createApi } from 'unsplash-js'
 
 const API = axios.create({
   baseURL: 'https://social-ecard.herokuapp.com/api/'
@@ -51,11 +53,84 @@ export function register (username, password) {
     })
 }
 
-// export function login (username, password) {
+// api request to Unsplash for images
+// links: https://github.com/unsplash/unsplash-js / https://unsplash.com/documentation#creating-a-developer-account / https://unsplash.com/oauth/applications/204104 / https://stackblitz.com/edit/unsplash-js-javascript?file=src%2Findex.js
+// const accessKey = TlQHhYwlF1gKtsQqX6twCM-WUusQSXgDFW1AhVOgat8
+// const secretKey = mo2cz5JNJfiM6W-HpVMUfMMQa7P_48maYN_e9r8HBIU
+
+// create an instance on node server
+// const unsplashApi = createApi({
+//   accessKey: 'TlQHhYwlF1gKtsQqX6twCM-WUusQSXgDFW1AhVOgat8',
+// })
+
+// const photoComp = ({ photo }) => (
+//   const  { user, urls } = photo
+
+//   return (
+//     <Fragment>
+//       <img className='img' src={urls.regular}
+//       <a
+//       className='credit'
+//       target='_blank'
+//       href={`https://unsplash.com/@${user.username}`}
+//       >
+//       {user.name}
+//       </a>
+//     </Fragment>
+//   )
+// )
+
+// const Body = () => {
+//   const [data, setPhotoResponse] = useState(null)
+
+//   useEffect(() => {
+//     unsplashApi.search
+//       .getPhotos({ query: 'cat', orientation: 'landscape'})
+//       .then(result => {
+//         setPhotoResponse(result)
+//       })
+//       .catch(() => {
+//         console.log('something went wrong!')
+//       })
+//   }, [])
+
+//   if (data === null) {
+//     return <div>Loading...</div>
+//   } else if (data.errors) {
+//     return (
+//       <div>
+//         <div>{data.error[0]}</div>
+//         <div>PS: Make sure to set your access token</div>
+//       </div>
+//     )
+//   } else {
+//     return (
+//       <div className='feed'>
+//         <ul className='columnUl'>
+//           {data.response.results.map(photo => (
+//             <li key={photo.id} className='li'><photoComp photo-{photo} />
+//             </li>
+//           ))}
+//         </ul>
+
+//       </div>
+//     )
+//   }
+// }
+
+// const Home = () => {
+//   return (
+//     <main className='root'>
+//       <Body />
+//     </main>
+//   )
+// }
+
+{ /* // export function login (username, password) {
 //   return (axios
 //     .post('http://localhost:3000/api/auth/users/', {
 //       username: username,
 //       password: password
 //     })
 //     .then((result) => result.data))
-// }
+// } */ }
