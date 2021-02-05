@@ -54,6 +54,10 @@ export function register (username, password) {
 }
 
 // api request to Unsplash for images
+
+// Insomnia link
+// https://api.unsplash.com/photos/?client_id=TlQHhYwlF1gKtsQqX6twCM-WUusQSXgDFW1AhVOgat8
+
 // links: https://github.com/unsplash/unsplash-js / https://unsplash.com/documentation#creating-a-developer-account / https://unsplash.com/oauth/applications/204104 / https://stackblitz.com/edit/unsplash-js-javascript?file=src%2Findex.js
 // const accessKey = TlQHhYwlF1gKtsQqX6twCM-WUusQSXgDFW1AhVOgat8
 // const secretKey = mo2cz5JNJfiM6W-HpVMUfMMQa7P_48maYN_e9r8HBIU
